@@ -1,0 +1,1 @@
+{"FileType":"TGMacro Project","Version":"2.3 Build:0","Macros":[{"Name":"Macro","Trigger":{"KeyPressMethod":1,"MasterKey":0,"MouseKey":256,"TriggerType":0},"Actions":[{"ActionType":2,"KeyPressMethod":0,"KeyboardKeyCode":73},{"ActionType":2,"KeyPressMethod":0,"KeyboardKeyCode":79}]}]}
