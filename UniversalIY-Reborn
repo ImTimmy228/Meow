@@ -53,6 +53,28 @@ if mainPlayer then
                 LocalP.Character:WaitForChild("Humanoid"):PlayEmote(169501346, 5)
                 isDancing = false
             end
+        if msg == ".helicopter" then
+            local speedIncrement = 100 -- Speed increment per second
+            local maxSpeed = 1000 -- Maximum speed to spin at
+            local spinTime = 5 -- Time to spin for, in seconds
+
+            -- Spin the player faster and faster
+            for i = 1, spinTime * 10 do
+                LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, i * speedIncrement / 10, 0)
+                wait()
+            end
+
+            -- Start moving the player up
+            LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, maxSpeed, 0)
+
+            -- Wait for 3 seconds before flinging the player
+            wait(3)
+
+    -- Fling the player
+    LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
+    LocalPlayer.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 5, 0)
+    LocalPlayer.Character:BreakJoints()
+end
         end -- AT END
     end)
 else
