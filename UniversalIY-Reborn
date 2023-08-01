@@ -78,7 +78,11 @@ end
         end -- AT END
     end)
 else
-    print("not found!")
-    wait(5)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTimmy228/Meow/main/UniversalIY-Reborn",true))()
+    print("Player not found, checking again in 5 seconds...")
+    repeat
+        wait(5)
+        mainPlayer = game:GetService("Players"):FindFirstChild(getgenv().mainaccount)
+    until mainPlayer
+    print("Player found, executing script...")
+    -- Put your code here that depends on the mainPlayer variable being defined
 end
